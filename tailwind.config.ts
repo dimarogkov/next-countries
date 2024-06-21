@@ -13,8 +13,6 @@ const config: Config = {
                 dark: '#121212',
                 darkLight: '#282828',
                 blue: '#382bf0',
-                grey: '#8b8b8b',
-                greyTwo: '#717171',
                 light: '#e4e4e7',
             },
         },

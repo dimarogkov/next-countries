@@ -1,12 +1,15 @@
-import { BtnLink, Text, Title } from '@/src/components/ui';
+import { getAllCountries } from '@/src/services/countries';
+import { Country } from '@/src/types/Country';
 
-const HomePage = () => {
+import CountriesList from '@/src/components/elements/CountriesList/CountriesList';
+
+const HomePage = async () => {
+    const data: Country[] = await getAllCountries();
+
     return (
         <section className='relative w-full'>
             <div className='w-full mb-[20px] last:mb-0'>
-                <Title className='mb-[8px] last:mb-0'>Home Page</Title>
-                <Text className='mb-[20px] last:mb-0'>This is Home Page.</Text>
-                <BtnLink href='/'>Link</BtnLink>
+                <CountriesList countries={data} />
             </div>
         </section>
     );
