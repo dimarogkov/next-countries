@@ -10,7 +10,7 @@ const BtnLink: React.FC<Props> = ({ children, href, className = '' }) => {
     return (
         <Link
             href={href}
-            className={`flex items-center justify-center w-full sm:w-fit sm:min-w-[120px] lg:min-w-[140px] h-[40px] lg:h-[44px] font-media px-[16px] rounded-[4px] text-[#fff] bg-black transition-opacity duration-300 hover:opacity-80 ${className}`}
+            className={`flex items-center justify-center w-full sm:w-fit sm:min-w-[100px] h-[44px] font-medium tracking-[1px] px-[16px] rounded-[4px] text-light bg-blue transition-opacity duration-300 hover:opacity-85 ${className}`}
         >
             {children}
         </Link>

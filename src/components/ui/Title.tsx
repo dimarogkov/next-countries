@@ -5,7 +5,9 @@ type Props = {
 
 const Title: React.FC<Props> = ({ children, className = '' }) => {
     return (
-        <h1 className={`w-full text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] font-bold ${className}`}>
+        <h1
+            className={`w-full font-bold text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] text-dark dark:text-light ${className}`}
+        >
             {children}
         </h1>
     );

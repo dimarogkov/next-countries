@@ -4,7 +4,7 @@ type Props = {
 };
 
 const Label: React.FC<Props> = ({ children, className = '' }) => {
-    return <label className={`relative block w-full ${className}`}>{children}</label>;
+    return <label className={`relative block w-full text-dark dark:text-light ${className}`}>{children}</label>;
 };
 
 export default Label;
