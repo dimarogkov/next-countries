@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import StoreProvider from '@/src/store/StoreProvider';
-import Header from '@/src/components/elements/Header/Header';
 import { ThemeProvider } from 'next-themes';
+import Header from '@/src/components/elements/Header/Header';
 
 import './globals.css';
 
@@ -19,19 +18,17 @@ type Props = {
 
 const RootLayout: React.FC<Props> = ({ children }) => {
     return (
-        <StoreProvider>
-            <html lang='en' suppressHydrationWarning>
-                <body>
-                    <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-                        <Header />
+        <html lang='en' suppressHydrationWarning>
+            <body>
+                <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+                    <Header />
 
-                        <main className='relative w-full max-w-[1440px] min-h-screen p-[24px] md:p-[40px] pt-[84px] sm:pt-[94px] md:pt-[120px] m-auto'>
-                            {children}
-                        </main>
-                    </ThemeProvider>
-                </body>
-            </html>
-        </StoreProvider>
+                    <main className='relative w-full max-w-[1440px] min-h-screen p-[20px] sm:p-[24px] md:p-[40px] pt-[80px] sm:pt-[94px] md:pt-[120px] m-auto'>
+                        {children}
+                    </main>
+                </ThemeProvider>
+            </body>
+        </html>
     );
 };
 

@@ -25,7 +25,7 @@ const ThemeController = () => {
                     value='theme'
                     checked={resolvedTheme === 'dark'}
                     onChange={changeTheme}
-                    className='toggle theme-controller border-light bg-light checked:bg-light hover:bg-light'
+                    className='toggle theme-controller border-grey bg-grey checked:bg-light hover:bg-grey dark:hover:bg-light'
                 />
 
                 <LuMoon className='w-[20px] h-[20px] text-dark dark:text-light' />
