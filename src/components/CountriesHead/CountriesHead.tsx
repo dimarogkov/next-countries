@@ -1,25 +1,45 @@
+import { Dispatch, SetStateAction } from 'react';
 import { LuSearch } from 'react-icons/lu';
-import { Input } from '../ui';
+import { Input, Select } from '../ui';
+import { SelectOption } from '@/src/types/SelectOption';
 
 type Props = {
-    search: string;
+    searchValue: string;
+    selectValue: string;
+    options: SelectOption[];
     onSearchChange: (value: string) => void;
+    onSelectChange: Dispatch<SetStateAction<string>>;
 };
 
-const CountriesHead: React.FC<Props> = ({ search, onSearchChange }) => {
+const CountriesHead: React.FC<Props> = ({
+    searchValue,
+    selectValue,
+    options,
+    onSearchChange = () => {},
+    onSelectChange = () => {},
+}) => {
     return (
-        <div className='flex justify-between w-full mb-[32px] last:mb-0'>
-            <div className='relative flex items-center w-full md:max-w-[48%] lg:max-w-[40%] xl:max-w-[34%]'>
+        <div className='flex justify-between w-full gap-[20px] sm:gap-[4%] mb-[32px] last:mb-0'>
+            <div className='relative flex flex-wrap items-center w-full sm:max-w-[48%] md:max-w-[390px]'>
                 <LuSearch className='absolute left-[10px] w-[20px] h-[20px] text-dark dark:text-light' />
 
                 <Input
                     name='search'
                     placeholder='Search of a country'
                     className='pl-[40px]'
-                    value={search}
+                    value={searchValue}
                     onChange={({ target }) => onSearchChange(target.value)}
                 />
             </div>
+
+            <Select
+                name='filter_by_region'
+                placeholder='Filter by region'
+                className='sm:max-w-[48%] md:max-w-[250px]'
+                options={options}
+                value={selectValue}
+                onChange={({ target }) => onSelectChange(target.value)}
+            />
         </div>
     );
 };
