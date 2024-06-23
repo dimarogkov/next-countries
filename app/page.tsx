@@ -24,7 +24,7 @@ const HomePage = () => {
 
         getAllCountries()
             .then(setCountries)
-            .finally(() => (time = window.setTimeout(() => setIsLoading(false), 2000)));
+            .finally(() => (time = window.setTimeout(() => setIsLoading(false), 1500)));
 
         return () => {
             window.clearTimeout(time);
