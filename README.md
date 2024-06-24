@@ -8,6 +8,14 @@
 -   Run `npm i`
 -   Run `npm run dev`
 
+## Technolgies used
+
+-   React
+-   Next.js
+-   TypeScript
+-   Tailwind CSS
+-   API
+
 ## File Structure
 
 -   app
@@ -19,11 +27,3 @@
     -   helpers
     -   services
     -   types
-
-## Technolgies used
-
--   React
--   Next.js
--   TypeScript
--   Tailwind CSS
--   API
