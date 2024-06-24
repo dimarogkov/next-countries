@@ -1,6 +1,6 @@
 # Countries App
 
-[Project Demo](https://dimarogkov.github.io/next-countries)
+[Project Demo](https://next-countries-orpin.vercel.app/)
 
 ## Installation Steps
 
