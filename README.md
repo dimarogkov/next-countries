@@ -1,6 +1,6 @@
-# Next Template
+# Countries App
 
-This is **Next Template** for development. Technolgies used: **React, TypeScript, Redux Toolkit, Tailwind CSS.**
+[Project Demo](https://dimarogkov.github.io/next-countries)
 
 ## Installation Steps
 
@@ -17,7 +17,13 @@ This is **Next Template** for development. Technolgies used: **React, TypeScript
         -   elements
         -   ui
     -   helpers
-    -   store
+    -   services
     -   types
-        -   enums
-        -   interfaces
+
+## Technolgies used
+
+-   React
+-   Next.js
+-   TypeScript
+-   Tailwind CSS
+-   API

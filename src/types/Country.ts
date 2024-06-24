@@ -3,10 +3,6 @@ export interface CountryName {
     official: string;
 }
 
-export interface CountryLanguages {
-    ara: string;
-}
-
 export interface CountryMaps {
     googleMaps: string;
     openStreetMaps: string;
@@ -22,7 +18,7 @@ export interface Country {
     capital: string;
     region: string;
     subregion: string;
-    languages: CountryLanguages;
+    languages: any;
     area: number;
     maps: CountryMaps;
     population: number;

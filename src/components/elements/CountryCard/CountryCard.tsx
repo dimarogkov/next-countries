@@ -20,7 +20,7 @@ const CountryCard: React.FC<Props> = ({ country }) => {
                 <Image
                     src={flags.svg}
                     alt={name.common}
-                    fill={true}
+                    fill
                     className='absolute top-0 left-0 w-full h-full object-cover object-center'
                 />
             </div>

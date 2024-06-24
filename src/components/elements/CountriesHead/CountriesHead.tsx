@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
-import { LuSearch } from 'react-icons/lu';
-import { Input, Select } from '../ui';
 import { SelectOption } from '@/src/types/SelectOption';
+import { LuSearch } from 'react-icons/lu';
+import { Input, Select } from '../../ui';
 
 type Props = {
     searchValue: string;
@@ -19,8 +19,8 @@ const CountriesHead: React.FC<Props> = ({
     onSelectChange = () => {},
 }) => {
     return (
-        <div className='flex justify-between w-full gap-[20px] sm:gap-[4%] mb-[32px] last:mb-0'>
-            <div className='relative flex flex-wrap items-center w-full sm:max-w-[48%] md:max-w-[390px]'>
+        <div className='flex flex-wrap justify-between w-full gap-[20px] sm:gap-[4%] mb-[32px] last:mb-0'>
+            <div className='relative flex items-center w-full sm:max-w-[48%] md:max-w-[390px]'>
                 <LuSearch className='absolute left-[10px] w-[20px] h-[20px] text-dark dark:text-light' />
 
                 <Input

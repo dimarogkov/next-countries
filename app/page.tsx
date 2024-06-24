@@ -8,15 +8,16 @@ import { getOptions } from '@/src/helpers/getOptions';
 import { Country } from '@/src/types/Country';
 
 import CountriesList from '@/src/components/elements/CountriesList/CountriesList';
-import CountriesHead from '@/src/components/CountriesHead/CountriesHead';
+import CountriesHead from '@/src/components/elements/CountriesHead/CountriesHead';
 import { Loader } from '@/src/components/ui';
+import CountryNotFound from '@/src/components/elements/CountryNotFound/CountryNotFound';
 
 const HomePage = () => {
     const [countries, setCountries] = useState<Country[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const [searchValue, setSearchValue] = useState('');
     const [appliedSearchValue, setAppliedSearchValue] = useState('');
+    const [searchValue, setSearchValue] = useState('');
     const [selectValue, setSelectValue] = useState('');
 
     useEffect(() => {
@@ -65,7 +66,12 @@ const HomePage = () => {
                             onSearchChange={onSearchChange}
                             onSelectChange={setSelectValue}
                         />
-                        <CountriesList countries={filteredCountries} />
+
+                        {filteredCountries.length ? (
+                            <CountriesList countries={filteredCountries} />
+                        ) : (
+                            <CountryNotFound />
+                        )}
                     </div>
                 </section>
             ) : (
