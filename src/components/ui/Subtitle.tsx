@@ -5,7 +5,7 @@ interface Props extends HTMLAttributes<HTMLHeadingElement> {
 }
 
 const Subtitle: React.FC<Props> = forwardRef<HTMLHeadingElement, Props>(({ className = '', ...props }, ref) => (
-    <h3 ref={ref} {...props} className={`w-full font-bold text-[20px] text-dark dark:text-light ${className}`} />
+    <h3 ref={ref} {...props} className={`w-full font-bold text-xl text-dark dark:text-light ${className}`} />
 ));
 
 Subtitle.displayName = 'Subtitle';

@@ -54,7 +54,7 @@ const HomePage = () => {
         <>
             {!isLoading ? (
                 <section className='relative w-full'>
-                    <div className='w-full mb-[20px] last:mb-0'>
+                    <div className='w-full mb-5 last:mb-0'>
                         <CountriesHead
                             searchValue={searchValue}
                             selectValue={selectValue}

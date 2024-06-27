@@ -19,14 +19,14 @@ const CountriesHead: React.FC<Props> = ({
     onSelectChange = () => {},
 }) => {
     return (
-        <div className='flex flex-wrap justify-between w-full gap-[20px] sm:gap-[4%] mb-[32px] last:mb-0'>
-            <div className='relative flex items-center w-full sm:max-w-[48%] md:max-w-[390px]'>
-                <LuSearch className='absolute left-[10px] w-[20px] h-[20px] text-dark dark:text-light' />
+        <div className='flex flex-wrap justify-between w-full gap-5 sm:gap-[4%] mb-8 last:mb-0'>
+            <div className='relative flex items-center w-full sm:max-w-[48%] md:max-w-96'>
+                <LuSearch className='absolute left-2.5 w-5 h-5 text-dark dark:text-light' />
 
                 <Input
                     name='search'
                     placeholder='Search of a country'
-                    className='pl-[40px]'
+                    className='pl-10'
                     value={searchValue}
                     onChange={({ target }) => onSearchChange(target.value)}
                 />
@@ -35,7 +35,7 @@ const CountriesHead: React.FC<Props> = ({
             <Select
                 name='filter_by_region'
                 placeholder='Filter by region'
-                className='sm:max-w-[48%] md:max-w-[250px]'
+                className='sm:max-w-[48%] md:max-w-64'
                 options={options}
                 value={selectValue}
                 onChange={({ target }) => onSelectChange(target.value)}

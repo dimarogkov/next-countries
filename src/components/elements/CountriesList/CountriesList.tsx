@@ -7,7 +7,7 @@ type Props = {
 
 const CountriesList: React.FC<Props> = ({ countries }) => {
     return (
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full gap-[20px] md:gap-[24px]'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full gap-5 md:gap-6'>
             {countries.map((country) => (
                 <CountryCard country={country} key={country.name.official} />
             ))}

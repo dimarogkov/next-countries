@@ -23,7 +23,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
                 <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
                     <Header />
 
-                    <main className='relative w-full max-w-[1440px] min-h-screen p-[20px] sm:p-[24px] md:p-[40px] pt-[80px] sm:pt-[94px] md:pt-[120px] m-auto'>
+                    <main className='relative w-full max-w-screen-2xl min-h-screen p-5 sm:p-6 md:p-10 pt-20 sm:pt-24 md:pt-32 m-auto'>
                         {children}
                     </main>
                 </ThemeProvider>

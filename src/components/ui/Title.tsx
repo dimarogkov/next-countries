@@ -8,7 +8,7 @@ const Title: React.FC<Props> = forwardRef<HTMLHeadingElement, Props>(({ classNam
     <h1
         ref={ref}
         {...props}
-        className={`w-full font-bold text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] text-dark dark:text-light ${className}`}
+        className={`w-full font-bold text-3xl md:text-4xl lg:text-5xl text-dark dark:text-light ${className}`}
     />
 ));
 

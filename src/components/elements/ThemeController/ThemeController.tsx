@@ -17,8 +17,8 @@ const ThemeController = () => {
 
     return (
         mounted && (
-            <label className='flex items-center cursor-pointer gap-x-[12px]'>
-                <LuSun className='w-[20px] h-[20px] text-dark dark:text-light' />
+            <label className='flex items-center cursor-pointer gap-x-3'>
+                <LuSun className='w-5 h-5 text-dark dark:text-light' />
 
                 <input
                     type='checkbox'
@@ -28,7 +28,7 @@ const ThemeController = () => {
                     className='toggle theme-controller border-grey bg-grey checked:bg-light hover:bg-grey dark:hover:bg-light'
                 />
 
-                <LuMoon className='w-[20px] h-[20px] text-dark dark:text-light' />
+                <LuMoon className='w-5 h-5 text-dark dark:text-light' />
             </label>
         )
     );

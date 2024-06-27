@@ -3,11 +3,9 @@ import { SiNextdotjs } from 'react-icons/si';
 
 const HeaderLogo = () => {
     return (
-        <Link href='/' className='flex items-center gap-x-[12px] transition-opacity duration-300 hover:opacity-75'>
-            <SiNextdotjs className='w-[30px] sm:w-[24px] md:w-[28px] sm:min-w-[24px] md:min-w-[28px] h-[30px] sm:h-[24px] md:h-[28px] text-dark dark:text-light' />
-            <span className='hidden sm:block w-fit font-medium text-[18px] text-dark dark:text-light'>
-                World Explorer
-            </span>
+        <Link href='/' className='flex items-center gap-x-3 transition-opacity duration-300 hover:opacity-75'>
+            <SiNextdotjs className='w-8 sm:w-7 md:w-8 sm:min-w-7 md:min-w-8 h-8 sm:h-7 md:h-8 text-dark dark:text-light' />
+            <span className='hidden sm:block w-fit font-medium text-lg text-dark dark:text-light'>World Explorer</span>
         </Link>
     );
 };

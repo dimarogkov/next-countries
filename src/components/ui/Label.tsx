@@ -8,7 +8,7 @@ const Label: React.FC<Props> = forwardRef<HTMLSpanElement, Props>(({ className =
     <span
         ref={ref}
         {...props}
-        className={`flex w-fit px-[8px] py-[4px] rounded-[4px] text-dark dark:text-light bg-light dark:bg-darkLight ${className}`}
+        className={`flex w-fit text-base px-2 py-1 rounded text-dark dark:text-light bg-light dark:bg-darkLight ${className}`}
     />
 ));
 

@@ -13,12 +13,12 @@ const defaultOptions = [{ id: 0, value: 'option', text: 'Option' }];
 
 const Select: React.FC<Props> = forwardRef<HTMLSelectElement, Props>(
     ({ placeholder = 'Placeholder', className = '', options = defaultOptions, ...props }, ref) => (
-        <div className={`relative flex items-center w-full h-[44px] cursor-pointer ${className}`}>
+        <div className={`relative flex items-center w-full h-11 cursor-pointer ${className}`}>
             <select
                 ref={ref}
                 {...props}
                 value={props.value || placeholder}
-                className='w-full h-full font-medium tracking-[0.5px] px-[20px] pr-[60px] rounded-[6px] border cursor-pointer outline-none appearance-none text-dark dark:text-light border-light dark:border-darkLight bg-light dark:bg-darkLight focus:border-black dark:focus:border-light transition-all duration-300'
+                className='w-full h-full font-medium tracking-wide px-5 pr-14 rounded-md border cursor-pointer outline-none appearance-none text-dark dark:text-light border-light dark:border-darkLight bg-light dark:bg-darkLight focus:border-black dark:focus:border-light transition-all duration-300'
             >
                 <>
                     <option value={placeholder} disabled hidden>
@@ -33,7 +33,7 @@ const Select: React.FC<Props> = forwardRef<HTMLSelectElement, Props>(
                 </>
             </select>
 
-            <LuChevronDown className='absolute right-[20px] w-[20px] h-[20px] text-dark dark:text-light' />
+            <LuChevronDown className='absolute right-5 w-5 h-5 text-dark dark:text-light' />
         </div>
     )
 );
