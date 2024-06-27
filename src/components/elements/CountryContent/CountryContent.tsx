@@ -11,7 +11,7 @@ const CountryContent: React.FC<Props> = ({ country }) => {
     return (
         <div className='flex flex-col w-full lg:w-[50%] gap-6 sm:gap-8 md:gap-10'>
             <div className='w-full p-3 rounded-md bg-light dark:bg-darkLight'>
-                <Title className='tracking-wide'>{name.common}</Title>
+                <Title className='tracking-wide mb-1 sm:mb-2 last:mb-0'>{name.common}</Title>
                 <Subtitle className='font-medium'>{name.official}</Subtitle>
             </div>
 
