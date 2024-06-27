@@ -2,8 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
-import { LuSun } from 'react-icons/lu';
-import { LuMoon } from 'react-icons/lu';
+import { LuMoon, LuSun } from 'react-icons/lu';
 
 const ThemeController = () => {
     const [mounted, setMounted] = useState(false);

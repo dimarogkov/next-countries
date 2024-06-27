@@ -9,8 +9,8 @@ import { Country } from '@/src/types/Country';
 
 import CountriesList from '@/src/components/elements/CountriesList/CountriesList';
 import CountriesHead from '@/src/components/elements/CountriesHead/CountriesHead';
-import { Loader } from '@/src/components/ui';
 import CountryNotFound from '@/src/components/elements/CountryNotFound/CountryNotFound';
+import { Loader } from '@/src/components/ui';
 
 const HomePage = () => {
     const [countries, setCountries] = useState<Country[]>([]);
