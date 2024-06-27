@@ -14,22 +14,18 @@ import CountryNotFound from '@/src/components/elements/CountryNotFound/CountryNo
 
 const HomePage = () => {
     const [countries, setCountries] = useState<Country[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
 
     const [appliedSearchValue, setAppliedSearchValue] = useState('');
     const [searchValue, setSearchValue] = useState('');
     const [selectValue, setSelectValue] = useState('');
 
     useEffect(() => {
-        let time = 0;
+        setIsLoading(true);
 
         getAllCountries()
             .then(setCountries)
-            .finally(() => (time = window.setTimeout(() => setIsLoading(false), 1500)));
-
-        return () => {
-            window.clearTimeout(time);
-        };
+            .finally(() => setIsLoading(false));
     }, []);
 
     const applySearchValue = useCallback(debounce(setAppliedSearchValue, 700), []);
